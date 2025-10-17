@@ -1,0 +1,28 @@
+[project]
+name = "scripture-rag"
+version = "0.1.0"
+description = "Run RAG queries on the standard works"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "chromadb>=1.1.1",
+]
+
+[project.scripts]
+scripture-rag = "scripture_rag.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/scripture_rag"]
+
+[dependency-groups]
+dev = [
+  "ruff>=0.14.1",
+]
+
+[tool.ruff]
+line-length = 100
+lint.select = ["E", "F", "I", "N", "W"]
