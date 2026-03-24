@@ -208,3 +208,7 @@ __marimo__/
 
 # Scripture assets (downloaded on first use)
 assets/
+
+# Mac stuff
+.DS_Store
+
